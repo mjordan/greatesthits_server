@@ -2,7 +2,7 @@
 
 ## Overview
 
-A simple proof-of-concept logging service for websites. GreatesHits only provides storage (in a SQLite database) and a web server (in Express) for enabling inserts and reads on the database. It does not provide any analytics tools - third party applications need to provide those.
+A simple proof-of-concept logging service for URLs. GreatesHits only provides storage (in a SQLite database) and a web server (in Express) for enabling inserts and reads on the database. It does not provide any analytics tools - third party applications need to provide those.
 
 Why not use Matomo? While Matomo is awesome, it is more focused on campaigns and other SEO and analytics services. Greatest Hits does one thing: it records when a resource at the URL was accessed. Like Matomo, it does this by receiving a request at its own web server's endpoint. If you need Matomo's features, use it. If you only need what Greatest Hits does, you may want to consider using it instead.
 
