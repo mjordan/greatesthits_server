@@ -36,7 +36,7 @@ Query parameters:
 ## Important functionality missing (this is a proof of concept)
 
 * authentication
-* a way to query usage data on a give URL
+* an API to query usage data on a give URL, for given range of dates, etc.
 * a third-party application to do something useful with the collected data (but there is the [GreatestHits](https://github.com/mjordan/greatesthits) Drupal module, which could render some pretty reports)
 * geolocation data, e.g., [IP2Location LITE](https://lite.ip2location.com/database/ip-country)
 
