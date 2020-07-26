@@ -4,13 +4,13 @@
 
 A simple proof-of-concept logging service for URLs. GreatesHits only provides storage (in a SQLite database) and a web server (in Express) for enabling inserts and reads on the database. It does not provide any analytics tools - third party applications need to provide those.
 
-Why not use Matomo? While Matomo is awesome, it is more focused on campaigns and other SEO and analytics services. Greatest Hits does one thing: it records when a resource at the URL was accessed. Like Matomo, it does this by receiving a request at its own web server's endpoint. If you need Matomo's features, use it. If you only need what Greatest Hits does, you may want to consider using it instead.
+Why not use Matomo? While Matomo is awesome, it is focused on campaigns, SEO and analytics services. Greatest Hits does one thing: it stores records documenting when a resource at a URL was requested. Like Matomo, it does this by receiving a request at its own web server's endpoint. If you need Matomo's features, use it. If you only need what Greatest Hits does, you may want to consider using it instead.
 
 ## Requirements
 
 * SQLite
 * Node.js v11.x or higher
-   * Express, SQLite
+   * Express, SQLite. Both of these Node modules are installed automatically.
 
 ## Installation
 
@@ -33,7 +33,7 @@ Query parameters:
 * `type`: `v` for view, `d` for a download.
 * `ip`: IPV4 (for now) address of the requester.
 
-## Important functionality missing in the "proof of concept"
+## Important functionality missing (this is a proof of concept)
 
 * authentication
 * a third-party application to do something useful with the collected data
