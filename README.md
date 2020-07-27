@@ -33,10 +33,48 @@ Query parameters:
 * `type`: `v` for view, `d` for a download.
 * `ip`: IPV4 (for now) address of the requester.
 
+Successful insertion will return a `201` response status code with no response body.
+
+## Reading records
+
+The `read` endpoint takes one query parameter, `url`, which takes a URL-encoded URL as its value:
+
+`curl -v "http://localhost:3000/read?url=http%3A%2F%2Flocalhost%3A8000%2Fnode%2F7"` will return JSON with this structure:
+
+```
+{
+   "message":"success",
+   "data":[
+      {
+         "id":10,
+         "time":"2020-07-26T20:19:47.353Z",
+         "url":"http://localhost:8000/node/7",
+         "type":"v",
+         "source_ip":"10.0.2.2"
+      },
+      {
+         "id":14,
+         "time":"2020-07-26T20:20:30.465Z",
+         "url":"http://localhost:8000/node/7",
+         "type":"v",
+         "source_ip":"10.0.2.2"
+      },
+      {
+         "id":22,
+         "time":"2020-07-26T20:22:52.197Z",
+         "url":"http://localhost:8000/node/7",
+         "type":"v",
+         "source_ip":"10.0.2.2"
+      }
+   ]
+}```
+
+Empty results will return a `200` response code with a response body of `{"message":"success","data":[]}`.
+
 ## Important functionality missing (this is a proof of concept)
 
 * authentication
-* a way to query usage data on a give URL
+* a way to query usage data for a date range
 * a third-party application to do something useful with the collected data (but there is the [GreatestHits](https://github.com/mjordan/greatesthits) Drupal module, which could render some pretty reports)
 * geolocation data, e.g., [IP2Location LITE](https://lite.ip2location.com/database/ip-country)
 
