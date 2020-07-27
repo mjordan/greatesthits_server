@@ -33,7 +33,7 @@ Query parameters:
 * `type`: `v` for view, `d` for a download.
 * `ip`: IPV4 (for now) address of the requester.
 
-Successful insertion will return a `201` response status code with no response body.
+Successful insertion will return a `201` status code with no response body.
 
 ## Reading records
 
@@ -67,7 +67,8 @@ The `read` endpoint takes one query parameter, `url`, which takes a URL-encoded 
          "source_ip":"10.0.2.2"
       }
    ]
-}```
+}
+```
 
 Empty results will return a `200` response code with a response body of `{"message":"success","data":[]}`.
 
